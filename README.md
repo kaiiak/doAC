@@ -1,2 +1,2 @@
-# doAC_
-##I will write something about ACM.
+我在试着做一些ACM的题库，不过好难～
+献丑了。
