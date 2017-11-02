@@ -10,7 +10,6 @@ func findComplement(num int) int {
 			j += "0"
 		}
 	}
-	fmt.Println(j)
 	c, _ := strconv.ParseInt(j, 2, 32)
 	return int(c)
 }
