@@ -12,14 +12,14 @@ void dfs(int numa, int numb, int k)
     {
         f2 = true;
         if(numa == 1) f1 = true;
-        /*ÔÚnumb·Ö½âÍê³ÉµÄÇé¿öÏÂ£¬²é¿´numaÊÇ·ñ¿ÉÒÔ·Ö½â¡£
-          ÕâÑù¿ÉÒÔ±£Ö¤Ä³Ğ©¹«Òò×Ó±»numbÓÃÁË£¬±ã²»ÄÜÔÙ±»numaÓÃ*/
+        /*åœ¨numbåˆ†è§£å®Œæˆçš„æƒ…å†µä¸‹ï¼ŒæŸ¥çœ‹numaæ˜¯å¦å¯ä»¥åˆ†è§£ã€‚
+          è¿™æ ·å¯ä»¥ä¿è¯æŸäº›å…¬å› å­è¢«numbç”¨äº†ï¼Œä¾¿ä¸èƒ½å†è¢«numaç”¨*/
     }
 
 	if(k == 1 || (f1 && f2)) return;
-	if(numa % k == 0) dfs(numa / k, numb, k - 1); //Òò×Ók,±»aÓÃ²»±»bÓÃ
-	if(numb % k == 0) dfs(numa, numb / k, k - 1); //Òò×Ók,±»bÓÃ²»±»aÓÃ
-	dfs(numa, numb, k - 1); //Òò×Ók,¼È²»±»aÓÃÒ²²»±»bÓÃ
+	if(numa % k == 0) dfs(numa / k, numb, k - 1); //å› å­k,è¢«aç”¨ä¸è¢«bç”¨
+	if(numb % k == 0) dfs(numa, numb / k, k - 1); //å› å­k,è¢«bç”¨ä¸è¢«aç”¨
+	dfs(numa, numb, k - 1); //å› å­k,æ—¢ä¸è¢«aç”¨ä¹Ÿä¸è¢«bç”¨
 }
 
 int main()
