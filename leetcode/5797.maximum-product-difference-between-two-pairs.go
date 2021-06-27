@@ -1,3 +1,5 @@
+https://leetcode-cn.com/problems/maximum-product-difference-between-two-pairs/
+
 func maxProductDifference(nums []int) int {
 	sort.Ints(nums)
 	n := len(nums)
