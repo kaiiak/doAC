@@ -10,7 +10,7 @@
  */
 func kthLargestLevelSum(root *TreeNode, k int) int64 {
 	var sums []int64
-	dfs(root, 0, &sums)
+	bfs(root, 0, &sums)
 
 	sort.Slice(sums, func(i, j int) bool {
 		return sums[i] > sums[j]
@@ -21,7 +21,7 @@ func kthLargestLevelSum(root *TreeNode, k int) int64 {
 	return sums[k-1]
 }
 
-func dfs(root *TreeNode, level int, sum *[]int64) {
+func bfs(root *TreeNode, level int, sum *[]int64) {
 	if root == nil {
 		return
 	}
@@ -29,6 +29,6 @@ func dfs(root *TreeNode, level int, sum *[]int64) {
 		*sum = append(*sum, 0)
 	}
 	(*sum)[level] += int64(root.Val)
-	dfs(root.Left, level+1, sum)
-	dfs(root.Right, level+1, sum)
+	bfs(root.Left, level+1, sum)
+	bfs(root.Right, level+1, sum)
 }
