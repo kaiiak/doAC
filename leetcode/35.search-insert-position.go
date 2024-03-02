@@ -15,7 +15,7 @@ func searchInsert(nums []int, target int) int {
 		}
 	}
 
-	// 没有查到,此时start >= end
+	// 没有查到,此时start > end
 	// 小于全部元素时,start = 0,end = -1
 	// 大于全部元素时,start = len(nums), end = len(nums)=-1
 
